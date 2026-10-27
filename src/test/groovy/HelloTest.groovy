@@ -3,13 +3,13 @@ import spock.lang.Specification
 class HelloTest extends Specification {
 
     def "application should return the expected greeting"() {
-        given: "the expected greeting"
-        def expected = "Automatic CI/CD build triggered!"
+        given: "a Hello application"
+        def app = new Hello()
 
-        when: "the application greeting is obtained"
-        def actual = "Automatic CI/CD build triggered!"
+        when: "the greeting is requested"
+        def actual = app.getGreeting()
 
         then: "the greeting should match"
-        actual == expected
+        actual == "Automatic CI/CD build triggered!"
     }
 }

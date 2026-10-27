@@ -1,6 +1,11 @@
 public class Hello {
+
+    public String getGreeting() {
+        return "Automatic CI/CD build triggered!";
+    }
+
     public static void main(String[] args) {
-        //System.out.println("Hello from my AWS DevOps CI/CD project!");
-		System.out.println("Automatic CI/CD build triggered!");
+        Hello app = new Hello();
+        System.out.println(app.getGreeting());
     }
 }
